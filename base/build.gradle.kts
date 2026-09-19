@@ -19,7 +19,12 @@ repositories {
     // Adventure
     mavenCentral()
 
-    // SpigotMC, Moshi, HikariCP, XSeries (v13.6.0+26.1)
+    // SpigotMC API snapshots
+    maven {
+        url = uri("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
+    }
+
+    // Paper / Bukkit API
     maven {
         url = uri("https://repo.papermc.io/repository/maven-public/")
     }
@@ -59,7 +64,7 @@ dependencies {
     runtimeOnly(project(":v2_21_2"))
     runtimeOnly(project(":v2_22_0"))
 
-    compileOnly("org.spigotmc:spigot-api:26.2-R0.1-SNAPSHOT")
+    compileOnly("org.spigotmc:spigot-api:1.21.11-R0.1-SNAPSHOT")
     compileOnly("net.essentialsx:EssentialsX:2.21.2-SNAPSHOT")
     compileOnly("com.squareup.moshi:moshi:1.15.2")
     compileOnly("com.zaxxer:HikariCP:7.0.2")
