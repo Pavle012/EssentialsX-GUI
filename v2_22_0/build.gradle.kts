@@ -5,7 +5,12 @@ plugins {
 java.sourceCompatibility = JavaVersion.VERSION_21
 
 repositories {
-    // SpigotAPI
+    // SpigotMC API snapshots
+    maven {
+        url = uri("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
+    }
+
+    // Paper / Bukkit API
     maven {
         url = uri("https://repo.papermc.io/repository/maven-public/")
     }
